@@ -170,26 +170,24 @@
     });
   }
 
-  /* ---------- Contact form (mailto fallback, zero backend) ---------- */
+  /* ---------- Contact form (Web3Forms, sends directly — mailto as fallback) ---------- */
   function initContactForm() {
     const form = $("[data-contact-form]");
     const success = $("[data-contact-success]");
+    const errorEl = $("[data-contact-error]");
     if (!form) return;
 
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      if (form.classList.contains("is-sending")) return;
-      if (!form.reportValidity()) return;
+    const to = (data.contactEmail || "andres@noventia.tech");
+    const accessKey = data.web3formsKey;
 
-      form.classList.add("is-sending");
+    function showSuccess() {
+      form.classList.remove("is-sending");
+      form.classList.add("is-sent");
+      if (success) success.classList.add("is-visible");
+      if (success) success.setAttribute("aria-hidden", "false");
+    }
 
-      const name = form.elements.name.value.trim();
-      const clinic = form.elements.clinic.value.trim();
-      const email = form.elements.email.value.trim();
-      const phone = form.elements.phone.value.trim();
-      const message = form.elements.message.value.trim();
-      const to = (data.contactEmail || "andres@noventia.tech");
-
+    function fallbackMailto(name, clinic, email, phone, message) {
       const subject = `Reserva de llamada — ${clinic || name}`;
       const bodyLines = [
         `Nombre: ${name}`,
@@ -198,15 +196,56 @@
         phone ? `Teléfono: ${phone}` : null,
         message ? `\nMensaje:\n${message}` : null,
       ].filter(Boolean);
-      const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+      window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    }
 
-      setTimeout(() => {
-        window.location.href = mailto;
-        form.classList.remove("is-sending");
-        form.classList.add("is-sent");
-        if (success) success.classList.add("is-visible");
-        if (success) success.setAttribute("aria-hidden", "false");
-      }, 500);
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      if (form.classList.contains("is-sending")) return;
+      if (!form.reportValidity()) return;
+
+      form.classList.add("is-sending");
+      if (errorEl) errorEl.classList.remove("is-visible");
+
+      const name = form.elements.name.value.trim();
+      const clinic = form.elements.clinic.value.trim();
+      const email = form.elements.email.value.trim();
+      const phone = form.elements.phone.value.trim();
+      const message = form.elements.message.value.trim();
+
+      if (!accessKey || accessKey === "TU_ACCESS_KEY_AQUI") {
+        setTimeout(() => { fallbackMailto(name, clinic, email, phone, message); showSuccess(); }, 400);
+        return;
+      }
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `Reserva de llamada — ${clinic || name}`,
+          from_name: name,
+          email,
+          to,
+          Nombre: name,
+          Empresa: clinic,
+          Teléfono: phone || "—",
+          Mensaje: message || "—",
+        }),
+      })
+        .then(res => res.json())
+        .then(result => {
+          if (result.success) {
+            showSuccess();
+          } else {
+            fallbackMailto(name, clinic, email, phone, message);
+            showSuccess();
+          }
+        })
+        .catch(() => {
+          fallbackMailto(name, clinic, email, phone, message);
+          showSuccess();
+        });
     });
   }
 
