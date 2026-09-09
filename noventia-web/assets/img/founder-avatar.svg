@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="600 110 320 320">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="600" y="110" width="320" height="320" fill="url(#avatarBg)"/>
+
+  <!-- shoulders/jacket hint -->
+  <path d="M 640,398 C 655,382 700,376 760,376 C 820,376 865,382 880,398 C 900,418 912,450 914,490 L 606,490 C 608,450 620,418 640,398 Z" fill="#151220"/>
+
+  <!-- shirt collar -->
+  <path d="M 726,388 L 760,432 L 794,388 L 780,378 L 760,396 L 740,378 Z" fill="#F5F4FA"/>
+  <!-- tie top -->
+  <path d="M 750,396 L 770,396 L 778,422 L 760,452 L 742,422 Z" fill="#7C3AED"/>
+
+  <!-- neck -->
+  <rect x="726" y="326" width="68" height="60" rx="14" fill="#C89B72"/>
+
+  <!-- head -->
+  <ellipse cx="760" cy="252" rx="86" ry="94" fill="#CFA279"/>
+  <ellipse cx="672" cy="258" rx="14" ry="20" fill="#CFA279"/>
+  <ellipse cx="848" cy="258" rx="14" ry="20" fill="#CFA279"/>
+
+  <ellipse cx="726" cy="256" rx="7" ry="9" fill="#171426"/>
+  <ellipse cx="794" cy="256" rx="7" ry="9" fill="#171426"/>
+  <path d="M 720,300 C 736,316 784,316 800,300" fill="none" stroke="#171426" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- hair -->
+  <path d="M 664,240
+           C 656,180 690,124 760,120
+           C 832,116 876,158 882,214
+           C 886,244 878,266 862,276
+           C 866,254 856,232 838,238
+           C 848,254 840,272 822,266
+           C 830,248 814,232 800,240
+           C 808,256 796,268 780,258
+           C 786,242 770,232 756,242
+           C 762,258 748,266 734,254
+           C 712,272 684,270 670,260
+           C 658,254 660,246 664,240 Z"
+        fill="#12101B"/>
+  <path d="M 664,240 C 656,180 690,124 760,120 C 780,119 798,122 813,129 C 780,116 736,124 706,158 C 682,186 672,214 674,244 C 671,244 667,242 664,240 Z" fill="#171526"/>
+</svg>
