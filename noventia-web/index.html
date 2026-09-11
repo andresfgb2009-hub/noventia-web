@@ -1,0 +1,753 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noventia — Agencia de Inteligencia Artificial para empresas</title>
+<meta name="description" content="Noventia diseña agentes IA, chatbots y automatizaciones a medida para empresas de cualquier sector. Caso de éxito principal: clínicas dentales. Reserva una llamada.">
+<meta name="theme-color" content="#0A0A18">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Noventia — Agencia de Inteligencia Artificial para empresas">
+<meta property="og:description" content="Agentes IA, chatbots y automatizaciones a medida para empresas de cualquier sector. Prueba gratuita de 2 semanas.">
+<meta property="og:image" content="assets/img/logo.png">
+
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+
+<link rel="stylesheet" href="styles.css?v=20260807">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<!-- ============ ICON SPRITE ============ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M5 4.5h14A1.5 1.5 0 0 1 20.5 6v9a1.5 1.5 0 0 1-1.5 1.5h-8.5L6 20.5V16.5H5A1.5 1.5 0 0 1 3.5 15V6A1.5 1.5 0 0 1 5 4.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-flow" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="18.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6.6 8.2 10 15.8M17.4 8.2 14 15.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-web" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 9.2h18" stroke="currentColor" stroke-width="1.6"/><circle cx="6.2" cy="7.1" r=".6" fill="currentColor" stroke="none"/><circle cx="8.2" cy="7.1" r=".6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7.6V12.3l3.2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.4l2.6 2.6L16 9.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8.4" r="3.3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.8 20c1.3-4 4.2-6.1 7.2-6.1s5.9 2.1 7.2 6.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 3.2 19 6v6c0 4.9-3 8.3-7 9.1-4-.8-7-4.2-7-9.1V6l7-2.8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.8 12.2 11 14.4l4.2-4.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.1" cy="6.9" r="1.1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-building" viewBox="0 0 24 24"><rect x="5" y="3" width="10" height="18" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15 9.2h4v11.8h-4M8 7h1M8 10h1M8 13h1M11 7h1M11 10h1M11 13h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 3.4l2.7 5.7 6.2.6-4.6 4.2 1.3 6.1L12 16.9l-5.6 3.1 1.3-6.1-4.6-4.2 6.2-.6L12 3.4z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="mark-1" viewBox="0 0 24 24"><circle cx="9" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="15" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="mark-2" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(45 12 12)"/></symbol>
+    <symbol id="mark-3" viewBox="0 0 24 24"><path d="M12 4l8 15H4L12 4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="mark-4" viewBox="0 0 24 24"><path d="M12 3l7.8 4.5v9L12 21l-7.8-4.5v-9L12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="mark-5" viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.9" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.9" fill="currentColor" stroke="none"/><circle cx="18" cy="12" r="1.9" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="mark-6" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></symbol>
+    <symbol id="mark-7" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="2.3"/></symbol>
+    <symbol id="mark-8" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="mark-9" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="mark-10" viewBox="0 0 24 24"><path d="M5 6l7 6-7 6M19 6l-7 6 7 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9.5h12V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 19.5v-6h4v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" data-nav>
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="Noventia — inicio">
+      <img src="assets/img/logo-wordmark-transparent.png" alt="Noventia" width="104" height="20">
+    </a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a class="nav-link" href="#problema">Problema</a>
+      <a class="nav-link" href="#servicios">Servicios</a>
+      <a class="nav-link" href="#clinicas">Clínicas</a>
+      <a class="nav-link" href="#como-trabajamos">Cómo trabajamos</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+      <a class="nav-link" href="persona.html">Personal</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" data-magnetic data-magnetic-strength="0.25" href="#contacto">Reservar llamada</a>
+    <button class="nav-burger" data-nav-toggle aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+      <svg class="icon"><use href="#icon-menu"></use></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" data-mobile-nav aria-hidden="true">
+  <button class="mobile-nav-close" data-nav-close aria-label="Cerrar menú">
+    <svg class="icon"><use href="#icon-close"></use></svg>
+  </button>
+  <nav aria-label="Navegación móvil">
+    <a href="#problema">Problema</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#clinicas">Clínicas</a>
+    <a href="#como-trabajamos">Cómo trabajamos</a>
+    <a href="#casos-exito">Casos de éxito</a>
+    <a href="#faq">FAQ</a>
+    <a href="persona.html">Personal</a>
+    <a class="btn btn-primary" href="#contacto">Reservar una llamada</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="section-hero-vivid" id="top">
+  <div class="container">
+    <div class="hero-copy-centered" data-reveal>
+      <span class="pill-badge-light">Agencia de Inteligencia Artificial</span>
+      <h1 class="hero-title-vivid">
+        Sistemas de <span class="hl">Inteligencia Artificial</span> que hacen crecer tu empresa, no tu carga de trabajo.
+      </h1>
+      <p class="hero-sub-vivid">
+        Diseñamos agentes IA, chatbots y automatizaciones a medida para empresas de cualquier sector.
+        Hoy, nuestro sistema más maduro trabaja en clínicas dentales — mañana, en la tuya.
+      </p>
+      <div class="hero-actions-vivid">
+        <a class="btn btn-white btn-lg" data-magnetic data-magnetic-strength="0.25" href="#contacto">
+          Reservar una llamada
+          <svg class="icon"><use href="#icon-arrow"></use></svg>
+        </a>
+        <a class="btn btn-white-outline btn-lg" href="#servicios">Ver servicios</a>
+      </div>
+      <p class="hero-trust-vivid">Sistemas a medida · Sin plantillas · Compruébalo con una prueba gratuita</p>
+    </div>
+
+    <div class="hero-visual-stack">
+    <div class="mock-card mock-card-wide" data-reveal>
+      <div class="mock-card-bar">
+        <span class="mock-dot mock-dot-red"></span>
+        <span class="mock-dot mock-dot-yellow"></span>
+        <span class="mock-dot mock-dot-green"></span>
+      </div>
+      <div class="flow-card-body">
+        <div class="flow-step">
+          <span class="flow-icon"><svg class="icon"><use href="#icon-phone"></use></svg></span>
+          <div>
+            <strong>Llamada, WhatsApp o formulario</strong>
+            <span>Entra por el canal que ya usas</span>
+          </div>
+        </div>
+        <span class="flow-connector" aria-hidden="true"></span>
+        <div class="flow-step flow-step-center">
+          <span class="flow-icon flow-icon-accent"><svg class="icon"><use href="#icon-flow"></use></svg></span>
+          <div>
+            <strong>Noventia IA</strong>
+            <span>Clasifica, responde y actúa</span>
+          </div>
+        </div>
+        <span class="flow-connector" aria-hidden="true"></span>
+        <div class="flow-step">
+          <span class="flow-icon"><svg class="icon"><use href="#icon-check"></use></svg></span>
+          <div>
+            <strong>Cita agendada · Lead guardado</strong>
+            <span>Sin que nadie tenga que estar mirando</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-photo-float" data-reveal>
+      <img src="assets/img/hero-freelancer.jpg" alt="Profesional trabajando con Noventia" width="380" height="507" loading="lazy">
+      <span class="hero-photo-badge"><span class="hero-photo-dot" aria-hidden="true"></span>En línea</span>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMPRESAS (logo strip) ============ -->
+<section class="logo-section" aria-labelledby="logo-strip-title">
+  <div class="container">
+    <p class="logo-strip-title" id="logo-strip-title" data-reveal>Empresas que ya confían en Noventia</p>
+    <ul class="logo-strip" data-reveal>
+      <li class="logo-chip"><img src="assets/img/client-anhuja.png" alt="Anhuja" loading="lazy" decoding="async"></li>
+      <li class="logo-chip"><img src="assets/img/client-mg-dental.png" alt="MG Arte Dental" loading="lazy" decoding="async"></li>
+      <li class="logo-chip"><img src="assets/img/client-gest-list-5.png" alt="Gest List 5" loading="lazy" decoding="async"></li>
+      <li class="logo-chip"><img src="assets/img/client-alyacla.png" alt="Alyacla" loading="lazy" decoding="async"></li>
+    </ul>
+    <div class="trust-badges" data-reveal>
+      <span class="pill pill-ok"><svg class="icon icon-sm"><use href="#icon-check"></use></svg>14 días de prueba gratuita</span>
+      <span class="pill pill-ok"><svg class="icon icon-sm"><use href="#icon-check"></use></svg>100% a medida, sin plantillas</span>
+      <span class="pill pill-ok"><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Atención 24/7</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÁS ALLÁ DE LAS CLÍNICAS DENTALES ============ -->
+<section class="section" id="mas-sectores">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Más allá de las clínicas dentales</p>
+      <h2>Automatizaciones a medida para cualquier tipo de negocio.</h2>
+      <p class="section-intro">Las clínicas dentales siguen siendo nuestro producto estrella, pero el mismo sistema se adapta a estos sectores — y a muchos más.</p>
+    </div>
+    <div class="grid grid-4 sector-grid">
+      <article class="glass-card sector-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-building"></use></svg></span>
+        <h3>Asesorías</h3>
+      </article>
+      <article class="glass-card sector-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-home"></use></svg></span>
+        <h3>Inmobiliarias</h3>
+      </article>
+      <article class="glass-card sector-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-plate"></use></svg></span>
+        <h3>Restaurantes</h3>
+      </article>
+      <article class="glass-card sector-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-bolt"></use></svg></span>
+        <h3>Talleres</h3>
+      </article>
+      <article class="glass-card sector-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-star"></use></svg></span>
+        <h3>Clínicas estéticas</h3>
+      </article>
+      <article class="glass-card sector-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-flow"></use></svg></span>
+        <h3>Empresas de servicios</h3>
+      </article>
+      <article class="glass-card sector-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-shield"></use></svg></span>
+        <h3>Despachos profesionales</h3>
+      </article>
+      <article class="glass-card sector-card sector-card-cta" data-reveal>
+        <h3>¿No ves tu sector?</h3>
+        <a class="link-arrow" href="#contacto">Hablemos <svg class="icon icon-sm"><use href="#icon-arrow"></use></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMA ============ -->
+<section class="section" id="problema">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">El problema</p>
+      <h2>Cada tarea repetitiva tiene un coste que no aparece en ningún informe.</h2>
+      <p class="section-intro">No es que tu equipo trabaje mal — es que buena parte de su tiempo se va en procesos que ya no deberían depender de una persona.</p>
+    </div>
+    <div class="grid grid-4">
+      <article class="glass-card problem-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-flow"></use></svg></span>
+        <h3>Trabajo que se repite</h3>
+        <p>Copiar datos, responder lo mismo, agendar a mano. Cada repetición es una hora que no vuelve a ningún resultado nuevo.</p>
+      </article>
+      <article class="glass-card problem-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-chat"></use></svg></span>
+        <h3>Canales que no dan abasto</h3>
+        <p>Teléfono, WhatsApp, web, email: cada canal nuevo es una cola más que alguien tiene que vigilar en tiempo real.</p>
+      </article>
+      <article class="glass-card problem-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-building"></use></svg></span>
+        <h3>Procesos que dependen de la memoria</h3>
+        <p>Sin un sistema detrás, cada paso depende de que alguien se acuerde. Tarde o temprano, algo se escapa.</p>
+      </article>
+      <article class="glass-card problem-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-clock"></use></svg></span>
+        <h3>Crecimiento que exige más manos</h3>
+        <p>Vender más no debería significar contratar más personas para hacer exactamente lo mismo de siempre.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="section section-alt" id="servicios">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Nuestros servicios</p>
+      <h2>Cinco formas de poner la Inteligencia Artificial a trabajar en tu empresa.</h2>
+    </div>
+    <div class="grid grid-5">
+      <article class="glass-card service-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-flow"></use></svg></span>
+        <h3>Automatizaciones personalizadas</h3>
+        <p>Estudiamos cómo trabaja tu equipo hoy y construimos el sistema que elimina el trabajo que sobra.</p>
+      </article>
+      <article class="glass-card service-card service-card-flagship" data-reveal>
+        <span class="badge-star"><svg class="icon icon-sm"><use href="#icon-star"></use></svg>Producto estrella</span>
+        <span class="service-icon"><svg class="icon"><use href="#icon-phone"></use></svg></span>
+        <h3>Automatización para clínicas dentales</h3>
+        <p>El sistema en el que más hemos invertido: recepción, agenda y seguimiento funcionando solos, 24 horas al día.</p>
+        <a class="link-arrow" href="#clinicas">Ver en detalle <svg class="icon icon-sm"><use href="#icon-arrow"></use></svg></a>
+      </article>
+      <article class="glass-card service-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-web"></use></svg></span>
+        <h3>Páginas web</h3>
+        <p>Sitios rápidos y modernos, escritos para convertir una visita en una llamada reservada.</p>
+      </article>
+      <article class="glass-card service-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-bolt"></use></svg></span>
+        <h3>Agentes IA</h3>
+        <p>Software que no solo responde: ejecuta. Cualifica leads, agenda reuniones, mueve datos entre tus herramientas.</p>
+      </article>
+      <article class="glass-card service-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-chat"></use></svg></span>
+        <h3>Chatbots</h3>
+        <p>Atienden tu web y tu WhatsApp al instante, con el tono exacto de tu marca, las 24 horas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLÍNICAS DENTALES (flagship) ============ -->
+<section class="section" id="clinicas">
+  <div class="container split">
+    <div class="split-copy" data-reveal>
+      <span class="badge-star"><svg class="icon icon-sm"><use href="#icon-star"></use></svg>Producto estrella</span>
+      <h2>Clínicas dentales: el sistema que mejor conocemos.</h2>
+      <p>Empezamos aquí porque el coste de una llamada perdida en una clínica es inmediato y medible: un paciente que no vuelve a intentarlo. Por eso es el sistema en el que más hemos afinado cada detalle.</p>
+      <p>El resto de nuestros servicios se construye con la misma lógica, aplicada a tu sector. Si tu negocio no es una clínica, esto es solo el ejemplo más maduro de lo que hacemos.</p>
+      <ul class="check-list">
+        <li><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Recepcionista IA</li>
+        <li><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Atención 24/7</li>
+        <li><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Confirmación automática de citas</li>
+        <li><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Recordatorios</li>
+        <li><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Recuperación de llamadas perdidas</li>
+        <li><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Integración con WhatsApp</li>
+        <li><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Automatización de agenda</li>
+      </ul>
+      <div class="split-actions">
+        <a class="btn btn-primary" data-magnetic data-magnetic-strength="0.2" href="#contacto">Reservar una llamada</a>
+        <a class="link-arrow" href="#servicios">Ver todos los servicios <svg class="icon icon-sm"><use href="#icon-arrow"></use></svg></a>
+      </div>
+    </div>
+
+    <div class="split-visual" data-reveal>
+      <div class="mock-card call-card-mock">
+        <div class="mock-card-bar">
+          <span class="mock-dot mock-dot-red"></span>
+          <span class="mock-dot mock-dot-yellow"></span>
+          <span class="mock-dot mock-dot-green"></span>
+        </div>
+        <div class="call-card-content">
+        <div class="call-card-head">
+          <span class="call-dot" aria-hidden="true"></span>
+          <span>Conversación con un paciente</span>
+        </div>
+        <div class="call-transcript">
+          <div class="bubble bubble-user">
+            <p>Hola, quería pedir cita para una revisión.</p>
+            <img class="bubble-avatar" src="assets/img/patient-avatar.jpg" alt="">
+          </div>
+          <div class="bubble bubble-ai">
+            <span class="bubble-avatar"><img src="assets/img/noventia-mark.png" alt="Noventia"></span>
+            <p>¡Claro! Tengo hueco el jueves a las 17:30, ¿te viene bien?</p>
+          </div>
+          <div class="bubble bubble-user">
+            <p>Perfecto, me viene genial.</p>
+            <img class="bubble-avatar" src="assets/img/patient-avatar.jpg" alt="">
+          </div>
+          <div class="bubble bubble-ai">
+            <span class="bubble-avatar"><img src="assets/img/noventia-mark.png" alt="Noventia"></span>
+            <p>Cita confirmada. Te mando ahora mismo la confirmación por WhatsApp.</p>
+          </div>
+        </div>
+        <div class="call-card-foot">
+          <span class="pill pill-ok"><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Cita agendada</span>
+          <span class="pill pill-ok"><svg class="icon icon-sm"><use href="#icon-check"></use></svg>WhatsApp enviado</span>
+        </div>
+        </div>
+      </div>
+      <div class="hero-photo-float hero-photo-float-alt" data-reveal>
+        <img src="assets/img/clinicas-photo.jpg" alt="Consulta dental" width="380" height="285" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============ CÓMO TRABAJAMOS ============ -->
+<section class="section section-alt" id="como-trabajamos">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Cómo trabajamos</p>
+      <h2>Un proceso, no una promesa.</h2>
+    </div>
+    <div class="process-list process-list-grid">
+      <div class="process-step" data-reveal>
+        <span class="process-n">01</span>
+        <div><h3>Reserva una llamada</h3><p>Hablamos contigo para entender tu negocio y ver en qué podemos ayudarte, sin cuestionarios eternos.</p></div>
+      </div>
+      <div class="process-step" data-reveal>
+        <span class="process-n">02</span>
+        <div><h3>Analizamos tu negocio</h3><p>Estudiamos tus procesos, tus herramientas y tu volumen real de trabajo. Sin este paso, cualquier propuesta sería una suposición.</p></div>
+      </div>
+      <div class="process-step" data-reveal>
+        <span class="process-n">03</span>
+        <div><h3>Diseñamos la automatización</h3><p>Construimos el sistema a partir de cómo funciona tu empresa hoy, no de una plantilla genérica.</p></div>
+      </div>
+      <div class="process-step" data-reveal>
+        <span class="process-n">04</span>
+        <div><h3>Instalamos el sistema</h3><p>Lo conectamos directamente a las herramientas que ya usas, sin obligarte a cambiar tu forma de trabajar.</p></div>
+      </div>
+      <div class="process-step" data-reveal>
+        <span class="process-n">05</span>
+        <div><h3>Adaptamos todo a tu empresa</h3><p>Afinamos el tono, las reglas y las excepciones hasta que el sistema responda exactamente como lo harías tú.</p></div>
+      </div>
+      <div class="process-step" data-reveal>
+        <span class="process-n">06</span>
+        <div><h3>Seguimiento y mejora continua</h3><p>Revisamos los resultados de forma constante y ajustamos lo que haga falta para que el sistema siga mejorando.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRUEBA GRATUITA ============ -->
+<section class="section" id="prueba-gratuita">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Prueba gratuita</p>
+      <h2>Compruébalo antes de decidir nada.</h2>
+    </div>
+    <div class="glass-card trial-card" data-reveal>
+      <div class="trial-pills">
+        <span class="pill pill-ok"><svg class="icon icon-sm"><use href="#icon-check"></use></svg>14 días de prueba</span>
+        <span class="pill pill-ok"><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Configuración a medida</span>
+        <span class="pill pill-ok"><svg class="icon icon-sm"><use href="#icon-check"></use></svg>Sin sorpresas en la factura</span>
+      </div>
+      <p>Antes de comprometerte con nada, tienes <strong>catorce días para ver el sistema funcionando de verdad</strong> dentro de tu negocio, sin coste durante ese periodo.</p>
+      <p>La puesta en marcha sí tiene un coste: cada empresa necesita una configuración distinta, y eso lleva trabajo real de nuestra parte. Te lo explicamos con números claros en la llamada — antes de que decidas nada, no después.</p>
+      <a class="btn btn-primary btn-lg" data-magnetic data-magnetic-strength="0.2" href="#contacto">Reservar una llamada</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFICIOS ============ -->
+<section class="section section-alt" id="beneficios">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Beneficios</p>
+      <h2>Lo que cambia dentro de tu empresa.</h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="glass-card benefit-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-clock"></use></svg></span>
+        <h3>Más tiempo</h3>
+        <p>Recuperas horas que hoy se van en tareas que no deberían ocupar a una persona.</p>
+      </article>
+      <article class="glass-card benefit-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-flow"></use></svg></span>
+        <h3>Menos tareas repetitivas</h3>
+        <p>Lo que se repite cada día se automatiza una sola vez.</p>
+      </article>
+      <article class="glass-card benefit-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-bolt"></use></svg></span>
+        <h3>Mayor productividad</h3>
+        <p>Tu equipo se centra en el trabajo que de verdad mueve el negocio.</p>
+      </article>
+      <article class="glass-card benefit-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-user"></use></svg></span>
+        <h3>Más clientes</h3>
+        <p>Menos leads y llamadas que se pierden por el camino.</p>
+      </article>
+      <article class="glass-card benefit-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-building"></use></svg></span>
+        <h3>Mejor organización</h3>
+        <p>Procesos que no dependen de que alguien se acuerde.</p>
+      </article>
+      <article class="glass-card benefit-card" data-reveal>
+        <span class="service-icon"><svg class="icon"><use href="#icon-shield"></use></svg></span>
+        <h3>Disponibilidad 24/7</h3>
+        <p>Tu empresa sigue respondiendo aunque tu equipo no esté.</p>
+      </article>
+    </div>
+
+    <div class="stats-strip stats-strip-3" data-reveal>
+      <div class="stat"><span class="stat-value"><span data-count-to="24">0</span>/7</span><span class="stat-label">disponibilidad</span></div>
+      <div class="stat"><span class="stat-value"><span data-count-to="14">0</span> días</span><span class="stat-label">de prueba gratuita</span></div>
+      <div class="stat"><span class="stat-value"><span data-count-to="100">0</span>%</span><span class="stat-label">a medida, sin plantillas</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASOS DE ÉXITO ============ -->
+<section class="section" id="casos-exito">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Casos de éxito</p>
+      <h2>Cómo aplicamos esto en negocios reales.</h2>
+      <p class="section-intro">Estructura pensada para casos reales. Estos son ejemplos ilustrativos mientras publicamos los primeros verificados.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="glass-card case-card" data-reveal>
+        <img class="card-photo-banner" src="assets/img/caso1-photo.jpg" alt="" loading="lazy">
+        <div class="case-card-head">
+          <span class="case-kicker">Caso 01</span>
+          <span class="pill">Clínica dental</span>
+        </div>
+        <dl class="case-fields">
+          <div><dt>Problema</dt><dd>Perdían llamadas fuera de horario y no tenían forma de recuperar esos pacientes.</dd></div>
+          <div><dt>Solución</dt><dd>Recepcionista IA 24/7 integrada con su agenda y WhatsApp.</dd></div>
+          <div class="case-result"><dt>Resultado</dt><dd>[Añadir resultado real — ej. % de llamadas recuperadas]</dd></div>
+        </dl>
+      </article>
+      <article class="glass-card case-card" data-reveal>
+        <img class="card-photo-banner" src="assets/img/caso2-photo.jpg" alt="" loading="lazy">
+        <div class="case-card-head">
+          <span class="case-kicker">Caso 02</span>
+          <span class="pill">Agencia de servicios</span>
+        </div>
+        <dl class="case-fields">
+          <div><dt>Problema</dt><dd>La gestión de leads dependía de una sola persona y los tiempos de respuesta se disparaban en temporada alta.</dd></div>
+          <div><dt>Solución</dt><dd>Agente IA que cualifica y responde a cada lead en minutos.</dd></div>
+          <div class="case-result"><dt>Resultado</dt><dd>[Añadir resultado real — ej. tiempo medio de respuesta]</dd></div>
+        </dl>
+      </article>
+      <article class="glass-card case-card" data-reveal>
+        <img class="card-photo-banner" src="assets/img/caso3-photo.jpg" alt="" loading="lazy">
+        <div class="case-card-head">
+          <span class="case-kicker">Caso 03</span>
+          <span class="pill">Despacho profesional</span>
+        </div>
+        <dl class="case-fields">
+          <div><dt>Problema</dt><dd>Cada nueva consulta exigía revisar disponibilidad a mano antes de poder confirmar una cita.</dd></div>
+          <div><dt>Solución</dt><dd>Automatización de agenda conectada a chatbot y calendario.</dd></div>
+          <div class="case-result"><dt>Resultado</dt><dd>[Añadir resultado real — ej. horas ahorradas al mes]</dd></div>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESEÑAS ============ -->
+<section class="section section-alt" id="reviews">
+  <div class="container">
+    <div class="section-head reviews-head" data-reveal>
+      <p class="eyebrow">Reseñas</p>
+      <h2>Empresas que ya están automatizando su negocio con IA.</h2>
+      <div class="reviews-rating">
+        <span class="stars" aria-hidden="true">
+          <svg class="icon"><use href="#icon-star"></use></svg><svg class="icon"><use href="#icon-star"></use></svg><svg class="icon"><use href="#icon-star"></use></svg><svg class="icon"><use href="#icon-star"></use></svg><svg class="icon"><use href="#icon-star"></use></svg>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-marquee-wrap" data-reviews-wrap>
+    <div class="reviews-marquee-track" data-reviews-track>
+      <article class="glass-card review-card">
+        <span class="stars" aria-hidden="true">
+          <svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg>
+        </span>
+        <blockquote>“Dejamos de perder pacientes por no coger el teléfono a tiempo. Ahora la clínica responde sola, incluso los domingos.”</blockquote>
+        <footer>
+          <img class="testimonial-avatar" src="assets/img/review-marta.jpg" alt="" loading="lazy">
+          <div><strong>Marta Colomé</strong><span>Directora, Clínica Dental Vidal</span></div>
+        </footer>
+      </article>
+      <article class="glass-card review-card">
+        <span class="stars" aria-hidden="true">
+          <svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg>
+        </span>
+        <blockquote>“Automatizamos la gestión de leads en menos de dos semanas. Fue la primera vez que una agencia cumplió el plazo que prometió.”</blockquote>
+        <footer>
+          <img class="testimonial-avatar" src="assets/img/review-inigo.jpg" alt="" loading="lazy">
+          <div><strong>Iñigo Larrea</strong><span>Fundador, Estudio Larrea</span></div>
+        </footer>
+      </article>
+      <article class="glass-card review-card">
+        <span class="stars" aria-hidden="true">
+          <svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg>
+        </span>
+        <blockquote>“Dejamos de depender de una sola persona para que nada se escapara. El sistema, simplemente, no se olvida.”</blockquote>
+        <footer>
+          <img class="testimonial-avatar" src="assets/img/review-clara.jpg" alt="" loading="lazy">
+          <div><strong>Clara Bassols</strong><span>Socia, Bassols &amp; Asociados</span></div>
+        </footer>
+      </article>
+      <article class="glass-card review-card">
+        <span class="stars" aria-hidden="true">
+          <svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg>
+        </span>
+        <blockquote>“No esperaba que sonara tan natural. Los pacientes no notan que hablan con un sistema.”</blockquote>
+        <footer>
+          <img class="testimonial-avatar" src="assets/img/review-david.jpg" alt="" loading="lazy">
+          <div><strong>David Roig</strong><span>Gerente, Clínica Estética Roig</span></div>
+        </footer>
+      </article>
+      <article class="glass-card review-card">
+        <span class="stars" aria-hidden="true">
+          <svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg>
+        </span>
+        <blockquote>“Antes cada presupuesto tardaba días en salir. Ahora el sistema lo prepara mientras seguimos con la obra.”</blockquote>
+        <footer>
+          <img class="testimonial-avatar" src="assets/img/review-jorge.jpg" alt="" loading="lazy">
+          <div><strong>Jorge Peral</strong><span>Gerente, Talleres Peral</span></div>
+        </footer>
+      </article>
+      <article class="glass-card review-card">
+        <span class="stars" aria-hidden="true">
+          <svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg><svg class="icon icon-sm"><use href="#icon-star"></use></svg>
+        </span>
+        <blockquote>“Las visitas se agendan solas, incluso fuera de horario comercial. Ya no perdemos ni una consulta.”</blockquote>
+        <footer>
+          <img class="testimonial-avatar" src="assets/img/review-sara.jpg" alt="" loading="lazy">
+          <div><strong>Sara Noguera</strong><span>Agente, Inmobiliaria Noguera</span></div>
+        </footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container container-narrow">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Las preguntas que nos hacen antes de la primera llamada.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item glass-card" data-reveal>
+        <button class="faq-q" data-faq-toggle aria-expanded="false">
+          <span>¿La IA sustituye a mi equipo?</span>
+          <svg class="icon"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq-a"><p>No. Se encarga de lo repetitivo y libera tiempo para que tu equipo se centre en lo que de verdad necesita a una persona.</p></div>
+      </div>
+      <div class="faq-item glass-card" data-reveal>
+        <button class="faq-q" data-faq-toggle aria-expanded="false">
+          <span>¿Se adapta a mi empresa?</span>
+          <svg class="icon"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq-a"><p>Sí. Cada sistema se diseña después de analizar tu negocio — no partimos de una plantilla genérica, sea cual sea tu sector.</p></div>
+      </div>
+      <div class="faq-item glass-card" data-reveal>
+        <button class="faq-q" data-faq-toggle aria-expanded="false">
+          <span>¿Cuánto tarda en estar listo?</span>
+          <svg class="icon"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq-a"><p>Depende de la complejidad, pero la prueba gratuita puede estar activa en pocos días desde la llamada de diagnóstico.</p></div>
+      </div>
+      <div class="faq-item glass-card" data-reveal>
+        <button class="faq-q" data-faq-toggle aria-expanded="false">
+          <span>¿Cómo funciona la prueba?</span>
+          <svg class="icon"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq-a"><p>Tienes dos semanas para comprobar el sistema funcionando de verdad en tu negocio, sin coste durante ese periodo.</p></div>
+      </div>
+      <div class="faq-item glass-card" data-reveal>
+        <button class="faq-q" data-faq-toggle aria-expanded="false">
+          <span>¿Qué ocurre después de la prueba?</span>
+          <svg class="icon"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq-a"><p>Si decides seguir, ajustamos y afinamos el sistema con seguimiento continuo. Si no, no hay compromiso de continuidad.</p></div>
+      </div>
+      <div class="faq-item glass-card" data-reveal>
+        <button class="faq-q" data-faq-toggle aria-expanded="false">
+          <span>¿Se integra con mis herramientas?</span>
+          <svg class="icon"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq-a"><p>En la mayoría de los casos sí: calendario, WhatsApp, CRM, web y las herramientas que ya usas a diario.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL + CONTACTO ============ -->
+<section class="section section-dark" id="contacto">
+  <div class="hero-mesh hero-mesh-dark" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow eyebrow-dark">Empecemos</p>
+      <h2 class="text-on-dark">Sin powerpoints.<br>Te enseñamos cómo quedaría en tu empresa.</h2>
+      <p class="section-intro text-on-dark-soft">Cuéntanos brevemente a qué te dedicas y qué te gustaría automatizar — el resto lo hablamos en la llamada.</p>
+    </div>
+
+    <div class="glass-card contact-card" data-reveal>
+      <form class="contact-form" data-contact-form novalidate>
+        <div class="field">
+          <label for="f-name">Nombre</label>
+          <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Tu nombre">
+        </div>
+        <div class="field">
+          <label for="f-clinic">Empresa</label>
+          <input id="f-clinic" name="clinic" type="text" required autocomplete="organization" placeholder="Nombre de tu empresa">
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="tu@empresa.com">
+        </div>
+        <div class="field">
+          <label for="f-phone">Teléfono <span class="field-optional">(opcional)</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="600 000 000">
+        </div>
+        <div class="field field-full">
+          <label for="f-message">Cuéntanos brevemente qué te gustaría automatizar <span class="field-optional">(opcional)</span></label>
+          <textarea id="f-message" name="message" rows="3" placeholder="Ej: perdemos tiempo gestionando citas o leads a mano…"></textarea>
+        </div>
+        <div class="field field-full">
+          <button type="submit" class="btn btn-primary btn-lg btn-block">
+            <span class="cta-form-label">Reservar una llamada</span>
+            <span class="cta-form-spinner" aria-hidden="true"></span>
+          </button>
+          <p class="form-note">Tu mensaje se enviará directamente a nuestro equipo. Si prefieres, también puedes escribirnos a <a href="mailto:andres@noventia.tech">andres@noventia.tech</a>.</p>
+        </div>
+      </form>
+      <div class="contact-success" data-contact-success aria-hidden="true">
+        <svg class="icon icon-lg"><use href="#icon-check"></use></svg>
+        <h3>Listo.</h3>
+        <p data-contact-success-msg>Hemos recibido tu mensaje. Te responderemos en breve a tu email.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="footer-cta-band">
+  <div class="footer-cta-mesh" aria-hidden="true"></div>
+  <div class="container footer-cta-inner" data-reveal>
+    <h2>¿Quieres saber quién está detrás de Noventia?</h2>
+    <a class="btn btn-white btn-lg" data-magnetic data-magnetic-strength="0.2" href="persona.html">Conóceme</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/img/logo-wordmark-transparent.png" alt="Noventia" width="120" height="23">
+      <p>Inteligencia Artificial que trabaja para empresas de cualquier sector.</p>
+      <a class="footer-social" href="https://instagram.com/noventia.tech" target="_blank" rel="noopener" aria-label="Instagram de Noventia">
+        <svg class="icon"><use href="#icon-instagram"></use></svg>
+      </a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Navegación</p>
+      <nav class="footer-links" aria-label="Enlaces del footer">
+        <a href="#problema">Problema</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#clinicas">Clínicas</a>
+        <a href="#como-trabajamos">Cómo trabajamos</a>
+        <a href="#faq">FAQ</a>
+        <a href="persona.html">Personal</a>
+      </nav>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Contacto</p>
+      <div class="footer-contact">
+        <a href="mailto:andres@noventia.tech">andres@noventia.tech</a>
+        <a class="btn btn-primary btn-sm footer-cta" href="#contacto">Reservar llamada</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 Noventia. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script defer src="lib/gsap.min.js"></script>
+<script defer src="lib/ScrollTrigger.min.js"></script>
+<script defer src="lib/manifest.js"></script>
+<script defer src="main.js?v=20260807"></script>
+</body>
+</html>
